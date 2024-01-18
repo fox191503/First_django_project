@@ -15,8 +15,8 @@ class Post(models.Model):
         verbose_name_plural = 'Посты'
         ordering = ['created_date',]
 
-def publich(self):
-    self.publich_date = timezone.now()    
+def publish(self):
+    self.publish_date = timezone.now()    
     self.save()
 
 def __str__(self):
