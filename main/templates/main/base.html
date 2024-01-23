@@ -1,3 +1,6 @@
+{% load static %}
+{% load thumbnail %}
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -7,6 +10,8 @@
     <body>
         {% block head %}
         {% endblock head %}
+            
+        
         <ul>
             {% for item in menu %}
                <h2><li><a href="{% url item.url_name %}">{{item.title}}</a></li></h2>

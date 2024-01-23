@@ -9,7 +9,8 @@ class Post(models.Model):
     text = models.TextField(blank=False, verbose_name='Текст')
     created_date = models.DateTimeField(default=timezone.now, editable=False)
     publich_date = models.DateTimeField(blank=True, null=True, editable=False)
-    
+    image = models.ImageField(upload_to='posts/', blank=True, null=True, verbose_name="Изображение поста")
+
     class Meta:
         verbose_name =  'Пост'
         verbose_name_plural = 'Посты'
@@ -20,7 +21,7 @@ def publish(self):
     self.save()
 
 def __str__(self):
-    return self.tittle
+    return self.title
 
 
 
